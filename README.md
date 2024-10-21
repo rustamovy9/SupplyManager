@@ -23,10 +23,6 @@ API предоставляет следующие возможности:
   - Получение всех заказов для конкретного поставщика с фильтрацией по статусу:
     - `GET /api/orders?supplierId={supplierId}&status={status}`
 
-- **Поставщики с товарами на складе**:
-  - Получение списка поставщиков с минимальным количеством товаров:
-    - `GET /api/suppliers?minProductQuantity={minQuantity}`
-
 - **Заказы по датам**:
   - Получение информации о заказах по диапазону дат:
     - `GET /api/orders?startDate={startDate}&endDate={endDate}`
@@ -43,13 +39,6 @@ API предоставляет следующие возможности:
   - Получение всех заказов с поддержкой пагинации:
     - `GET /api/orders?pageNumber={pageNumber}&pageSize={pageSize}`
 
-- **Пагинация для товаров**:
-  - Получение всех товаров с их категориями и поставщиками с поддержкой пагинации:
-    - `GET /api/products?pageNumber={pageNumber}&pageSize={pageSize}&includeDetails=true`
-
-- **Получение популярных товаров**:
-  - Получение всех товаров, которые были заказаны более 5 раз:
-    - `GET /api/products/mostOrdered?minOrders=5`
 
 - **Этот API использует асинхронное программирование, Dependency Injection для управления зависимостями и Middleware для обработки ошибок.
 
